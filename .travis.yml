@@ -1,14 +1,19 @@
 language: java
 sudo: false
-script: ant
 
-jdk:
-  - oraclejdk8
-  - oraclejdk7
-  - openjdk6
-  - openjdk7
+# Build all the code on each JDK, but only build Javadoc on JDK8:
+env:
+  - BUILD_DOCS='false'
+matrix:
+  include:
+    - env: BUILD_DOCS=true
+      jdk: oraclejdk8
+    - jdk: oraclejdk7
+    - jdk: openjdk7
+    - jdk: openjdk6
+
+script: ant all && test BUILD_DOCS = true && ant javadoc
 
 # TODO:
     # Add in JUnit tests.
-    # We probably don't need to build Javadoc on every single JDK.
-    # Do build matrices help any here?
+    # Are any code coverage tools good to have here for Javadoc & JUnit?
