@@ -7,3 +7,8 @@ jdk:
   - oraclejdk7
   - openjdk6
   - openjdk7
+
+# TODO:
+    # Add in JUnit tests.
+    # We probably don't need to build Javadoc on every single JDK.
+    # Do build matrices help any here?
