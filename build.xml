@@ -31,7 +31,5 @@
         <javadoc sourcepath="${src.dir}" destdir="${jdocs.dir}" additionalparam="subpackages"/>
     </target>
 
-    <target name="all" depends="compile,jar"/>
-    
-    <target name="test" depends="all"/>
+    <target name="all" depends="compile,jar,javadoc"/>
 </project>
