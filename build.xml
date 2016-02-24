@@ -15,7 +15,6 @@
     <target name = "compile" depends="prepare">
         <mkdir dir="bin"/>
         <javac srcdir= "src" destdir = "bin"/>
-
     </target>
 
     <target name = "jar" depends = "compile">
