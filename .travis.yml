@@ -12,7 +12,8 @@ matrix:
 
 script:
  - ant all
- - if [ "$BUILD_DOCS" == "true" ]; then
+ - if [ "$BUILD_DOCS" == "true" ]
+   then
       ant javadoc
    fi
 
