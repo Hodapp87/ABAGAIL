@@ -4,7 +4,7 @@ sudo: false
 # Build all the code on each JDK, but only build Javadoc on JDK8:
 matrix:
   global:
-  - BUILD_DOCS='false'
+  - BUILD_DOCS=false
   include:
     - env: BUILD_DOCS=true
       jdk: oraclejdk8
