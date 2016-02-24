@@ -1,6 +1,5 @@
 <!-- Build file for ABAGAIL (c) Andrew Guillory 2005 -->
 <project default="all">
-
     <target name="init">
         <property name="jdocs.dir" value="docs"/>
         <property name="bin.dir" value="bin"/>
@@ -14,7 +13,7 @@
 
     <target name="compile" depends="prepare">
         <mkdir dir="bin"/>
-        <javac srcdir= "src" destdir="bin"/>
+        <javac srcdir= "src" destdir="bin" includeantruntime="false"/>
     </target>
 
     <target name="jar" depends="compile">
@@ -35,5 +34,4 @@
     <target name="all" depends="compile,jar"/>
     
     <target name="test" depends="all"/>
-
 </project>
